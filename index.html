@@ -14,47 +14,107 @@
     <body>
         <header> 
             <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-                <span class="navbar-brand mb-0 h1">Weather Dashboard</span>
+                <span class="navbar-brand mb-0 h1">United States Weather Dashboard</span>
             </nav>
         </header>
-        
+        <br>
         <div class="container">
-            <h5>Search for a city:</h5>
-            <div class="input-group">
-                <input type="text" aria-label="City" placeholder="City Name" class="form-control">
-                <input type="text" aria-label="State" placeholder="State Name" class="form-control">
-
-                <div class="input-group-append">
-                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Submit</button>
+            <div class="row">
+                <div class="col-2" id="searchBox">
+                    <h5>Search for a city:</h5>
+                    <div class="input-group">
+                        <input id="cityInput" type="text" aria-label="City" placeholder="City Name" class="form-control">
+                    </div>
+                    <br>
+                    <div class="input-group-append">
+                        <button class="btn searchBtn btn-outline-secondary" style="background-color: #e3f2fd" type="submit" id="button-addon2">Search</button>
+                    </div>
+                </div>
+                <div class="col-10" id="currentState">
+                    <div class="card">
+                        <div class="card-header">
+                          <h2 id="searchedCityInfo"></h2>
+                        </div>
+                        <div class="card-body">
+                          <p class="card-text" id="temperature"></p>
+                          <p class="card-text" id="humidity"></p>
+                          <p class="card-text" id="windSpeed"></p>
+                          <p class="card-text" id="uvIndexEl"><span class="badge badge-info" id="uvIndexNum"></span></p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <h5>Search History</h5>
-            <div class="btn-group-vertical" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-warning"></button>
-                <button type="button" class="btn btn-success"></button>
-                <button type="button" class="btn btn-info"></button>
-            </div>
-
-            <div class="list-group">
-                <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-                <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-                <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-                <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-            </div>
-
-            <!-- <ul class="list-group list-group-flush">
-                <li class="list-group-item">Cras justo odio</li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
-                <li class="list-group-item">Morbi leo risus</li>
-                <li class="list-group-item">Porta ac consectetur ac</li>
-                <li class="list-group-item">Vestibulum at eros</li>
-            </ul> -->
-
-            <!-- <div class="card">
-                <div class="card-body">
-                    This is some text within a card body.
+            <br>
+            <div class="row">
+                <div class="col-2" id="historyBox">
+                    <h5>Search History:</h5>
+                    <div class="row">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action"></a>
+                            <a href="#" class="list-group-item list-group-item-action"></a>
+                            <a href="#" class="list-group-item list-group-item-action"></a>
+                            <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+                        </div>
+                    </div>
                 </div>
-            </div> -->
+                <div class="col-10" id="fiveDay">
+                    <h2>5-Day Forecast:</h2>
+                    <div class="row">
+                        <div class="col-2">
+                            <div class="card">
+                                <div class="card-body">
+                                <b id="day1Date">DATE</b>
+                                <p>pic</p>
+                                <p id="day1temp">Temp:</p>
+                                <p id="day1Hum">Humidity:</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="card">
+                                <div class="card-body">
+                                <b id="day2Date">DATE</b>
+                                <p>pic</p>
+                                <p id="day2temp">Temp:</p>
+                                <p id="day2Hum">Humidity:</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="card">
+                                <div class="card-body">
+                                <b id="day3Date">DATE</b>
+                                <p>pic</p>
+                                <p id="day3temp">Temp:</p>
+                                <p id="day3Hum">Humidity:</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="card">
+                                <div class="card-body">
+                                <b id="day4Date">DATE</b>
+                                <p>pic</p>
+                                <p id="day4temp">Temp:</p>
+                                <p id="day4Hum">Humidity:</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="card">
+                                <div class="card-body">
+                                <b id="day5Date">DATE</b>
+                                <p>pic</p>
+                                <p id="day5temp">Temp:</p>
+                                <p id="day5Hum">Humidity:</p>
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>
+            </div>       
+
         </div>
 
 
@@ -63,12 +123,14 @@
 
 
 
+        <!-- <i class="fas fa-search"></i> -->
 
 
 
 
 
-
-
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <script src="script.js"></script> 
     </body>
 </html>

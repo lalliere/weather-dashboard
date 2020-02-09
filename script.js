@@ -14,7 +14,7 @@ function getData() {
 
     
     $.ajax({
-        url: "http://api.openweathermap.org/data/2.5/weather?q=" + cityName + ",US&units=imperial&APPID=abcd9257d5733a460d1691720d4f7b99",
+        url: "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + ",US&units=imperial&APPID=abcd9257d5733a460d1691720d4f7b99",
         method: "GET"
     }).then(function(response) {
         // console.log(response);
@@ -39,7 +39,7 @@ function getData() {
         
         
         $.ajax({
-            url: "http://api.openweathermap.org/data/2.5/uvi?appid=abcd9257d5733a460d1691720d4f7b99&lat=" + lat + "&" + "lon=" + lon,
+            url: "https://api.openweathermap.org/data/2.5/uvi?appid=abcd9257d5733a460d1691720d4f7b99&lat=" + lat + "&" + "lon=" + lon,
             method: "GET"
         }).then(function(response) {
             // console.log(response);
@@ -60,7 +60,7 @@ function getData() {
         })
 
         $.ajax({
-            url: "http://api.openweathermap.org/data/2.5/forecast?id=" + cityCode + "&units=imperial&appid=abcd9257d5733a460d1691720d4f7b99",
+            url: "https://api.openweathermap.org/data/2.5/forecast?id=" + cityCode + "&units=imperial&appid=abcd9257d5733a460d1691720d4f7b99",
             method: "GET"
         }).then(function(response) {
             // console.log(response);
@@ -168,7 +168,7 @@ $(document).on("click", ".histBtn", function () {
     let input = $(this).val();
 
     $.ajax({
-        url: "http://api.openweathermap.org/data/2.5/weather?q=" + input + ",US&units=imperial&APPID=abcd9257d5733a460d1691720d4f7b99",
+        url: "https://api.openweathermap.org/data/2.5/weather?q=" + input + ",US&units=imperial&APPID=abcd9257d5733a460d1691720d4f7b99",
         method: "GET"
     }).then(function(response) {
         let iconCode = response.weather[0].icon;
@@ -192,7 +192,7 @@ $(document).on("click", ".histBtn", function () {
         
         
         $.ajax({
-            url: "http://api.openweathermap.org/data/2.5/uvi?appid=abcd9257d5733a460d1691720d4f7b99&lat=" + lat + "&" + "lon=" + lon,
+            url: "https://api.openweathermap.org/data/2.5/uvi?appid=abcd9257d5733a460d1691720d4f7b99&lat=" + lat + "&" + "lon=" + lon,
             method: "GET"
         }).then(function(response) {
             // console.log(response);
@@ -213,7 +213,7 @@ $(document).on("click", ".histBtn", function () {
         })
 
         $.ajax({
-            url: "http://api.openweathermap.org/data/2.5/forecast?id=" + cityCode + "&units=imperial&appid=abcd9257d5733a460d1691720d4f7b99",
+            url: "https://api.openweathermap.org/data/2.5/forecast?id=" + cityCode + "&units=imperial&appid=abcd9257d5733a460d1691720d4f7b99",
             method: "GET"
         }).then(function(response) {
          

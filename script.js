@@ -19,7 +19,7 @@ function getData() {
     }).then(function(response) {
         // console.log(response);
         let iconCode = response.weather[0].icon;
-        let iconURL = "http://openweathermap.org/img/w/" + iconCode + ".png";
+        let iconURL = "https://openweathermap.org/img/w/" + iconCode + ".png";
        
         $('#wicon').attr('src', iconURL);
         
@@ -66,19 +66,19 @@ function getData() {
             // console.log(response);
        
             let day1IconCode = response.list[5].weather[0].icon;
-            let day1IconURL = "http://openweathermap.org/img/w/" + day1IconCode + ".png";
+            let day1IconURL = "https://openweathermap.org/img/w/" + day1IconCode + ".png";
             
             let day2IconCode = response.list[13].weather[0].icon;
-            let day2IconURL = "http://openweathermap.org/img/w/" + day2IconCode + ".png";
+            let day2IconURL = "https://openweathermap.org/img/w/" + day2IconCode + ".png";
 
             let day3IconCode = response.list[21].weather[0].icon;
-            let day3IconURL = "http://openweathermap.org/img/w/" + day3IconCode + ".png";
+            let day3IconURL = "https://openweathermap.org/img/w/" + day3IconCode + ".png";
 
             let day4IconCode = response.list[29].weather[0].icon;
-            let day4IconURL = "http://openweathermap.org/img/w/" + day4IconCode + ".png";
+            let day4IconURL = "https://openweathermap.org/img/w/" + day4IconCode + ".png";
 
             let day5IconCode = response.list[37].weather[0].icon;
-            let day5IconURL = "http://openweathermap.org/img/w/" + day5IconCode + ".png";
+            let day5IconURL = "https://openweathermap.org/img/w/" + day5IconCode + ".png";
 
             
             $("#day1Date").html(response.list[5].dt_txt.slice(5,10));
@@ -172,7 +172,7 @@ $(document).on("click", ".histBtn", function () {
         method: "GET"
     }).then(function(response) {
         let iconCode = response.weather[0].icon;
-        let iconURL = "http://openweathermap.org/img/w/" + iconCode + ".png";
+        let iconURL = "https://openweathermap.org/img/w/" + iconCode + ".png";
         
         $('#wicon').attr('src', iconURL);
         
@@ -219,19 +219,19 @@ $(document).on("click", ".histBtn", function () {
          
         
             let day1IconCode = response.list[5].weather[0].icon;
-            let day1IconURL = "http://openweathermap.org/img/w/" + day1IconCode + ".png";
+            let day1IconURL = "https://openweathermap.org/img/w/" + day1IconCode + ".png";
             
             let day2IconCode = response.list[13].weather[0].icon;
-            let day2IconURL = "http://openweathermap.org/img/w/" + day2IconCode + ".png";
+            let day2IconURL = "https://openweathermap.org/img/w/" + day2IconCode + ".png";
 
             let day3IconCode = response.list[21].weather[0].icon;
-            let day3IconURL = "http://openweathermap.org/img/w/" + day3IconCode + ".png";
+            let day3IconURL = "https://openweathermap.org/img/w/" + day3IconCode + ".png";
 
             let day4IconCode = response.list[29].weather[0].icon;
-            let day4IconURL = "http://openweathermap.org/img/w/" + day4IconCode + ".png";
+            let day4IconURL = "https://openweathermap.org/img/w/" + day4IconCode + ".png";
 
             let day5IconCode = response.list[37].weather[0].icon;
-            let day5IconURL = "http://openweathermap.org/img/w/" + day5IconCode + ".png";
+            let day5IconURL = "https://openweathermap.org/img/w/" + day5IconCode + ".png";
 
             
             $("#day1Date").html(response.list[5].dt_txt.slice(5,10));

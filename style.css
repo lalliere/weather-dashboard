@@ -1,0 +1,25 @@
+.uvSpan {
+    padding: 5px;
+}
+
+.favorable {
+    background-color: green;
+    color: white;
+}
+
+.moderate {
+    background-color: yellow;
+}
+
+.severe {
+    background-color: red;
+    color: white;
+}
+
+.historyRow {
+    width: 8rem;
+}
+
+.histBtn {
+    width: 8rem;
+}

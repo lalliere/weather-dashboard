@@ -5,8 +5,8 @@
 ## Questions for you:
 * Are you going somewhere? 
 * Do you need to bring an umbrella?
-* Is it shorts and a sweatshirt weather where you're going?
-* Or is it pants and a t-shirt weather?
+* Is it "shorts and a sweatshirt" weather where you're going?
+* Or is it "pants and a t-shirt" weather?
 
 Regardless of where you are travelling, knowing the weather is of the utmost importance!!
 
@@ -18,4 +18,4 @@ Your most recent searches will be saved and listed for easy access.
 
 ## Preview:
 
-<img src = ./assets/06-server-side-apis-homework-demo.png>
+<img src = ./assets/EL-weather-dashboard-demo.png>

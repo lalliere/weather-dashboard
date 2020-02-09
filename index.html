@@ -7,13 +7,13 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" />
-        <!-- <link rel="stylesheet" href="style.css" /> -->
+        <link rel="stylesheet" href="style.css">
         <title>Weather Dashboard</title>
     </head>
 
     <body>
         <header> 
-            <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+            <nav class="navbar navbar-dark bg-info">
                 <span class="navbar-brand mb-0 h1">United States Weather Dashboard</span>
             </nav>
         </header>
@@ -27,19 +27,20 @@
                     </div>
                     <br>
                     <div class="input-group-append">
-                        <button class="btn searchBtn btn-outline-secondary" style="background-color: #e3f2fd" type="submit" id="button-addon2">Search</button>
+                        <button class="btn searchBtn btn-outline-info" type="submit" id="button-addon2">Search</button>
                     </div>
                 </div>
                 <div class="col-10" id="currentState">
                     <div class="card">
                         <div class="card-header">
                           <h2 id="searchedCityInfo"></h2>
+                          <span id="icon"><img id="wicon"></span>
                         </div>
                         <div class="card-body">
                           <p class="card-text" id="temperature"></p>
                           <p class="card-text" id="humidity"></p>
                           <p class="card-text" id="windSpeed"></p>
-                          <p class="card-text" id="uvIndexEl"><span class="badge badge-info" id="uvIndexNum"></span></p>
+                          <p class="card-text" id="uv"></p>
                         </div>
                     </div>
                 </div>
@@ -49,64 +50,60 @@
                 <div class="col-2" id="historyBox">
                     <h5>Search History:</h5>
                     <div class="row">
-                        <div class="list-group">
-                            <a href="#" class="list-group-item list-group-item-action"></a>
-                            <a href="#" class="list-group-item list-group-item-action"></a>
-                            <a href="#" class="list-group-item list-group-item-action"></a>
-                            <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+                        <div class="historyRow">
                         </div>
                     </div>
                 </div>
                 <div class="col-10" id="fiveDay">
                     <h2>5-Day Forecast:</h2>
                     <div class="row">
-                        <div class="col-2">
-                            <div class="card">
+                        <div class="col">
+                            <div class="card text-white bg-info mb-3" style="max-width: 10rem">
                                 <div class="card-body">
-                                <b id="day1Date">DATE</b>
-                                <p>pic</p>
-                                <p id="day1temp">Temp:</p>
-                                <p id="day1Hum">Humidity:</p>
+                                    <b id="day1Date"></b>
+                                    <p><img id="day1Icon"></img></p>
+                                    <p id="day1Temp"></p>
+                                    <p id="day1Hum"></p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-2">
-                            <div class="card">
+                        <div class="col">
+                            <div class="card text-white bg-info mb-3" style="max-width: 10rem">
                                 <div class="card-body">
-                                <b id="day2Date">DATE</b>
-                                <p>pic</p>
-                                <p id="day2temp">Temp:</p>
-                                <p id="day2Hum">Humidity:</p>
+                                    <b id="day2Date"></b>
+                                    <p><img id="day2Icon"></img></p>
+                                    <p id="day2Temp"></p>
+                                    <p id="day2Hum"></p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-2">
-                            <div class="card">
+                        <div class="col">
+                            <div class="card text-white bg-info mb-3" style="max-width: 10rem">
                                 <div class="card-body">
-                                <b id="day3Date">DATE</b>
-                                <p>pic</p>
-                                <p id="day3temp">Temp:</p>
-                                <p id="day3Hum">Humidity:</p>
+                                    <b id="day3Date"></b>
+                                    <p><img id="day3Icon"></img></p>
+                                    <p id="day3Temp"></p>
+                                    <p id="day3Hum"></p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-2">
-                            <div class="card">
+                        <div class="col">
+                            <div class="card text-white bg-info mb-3" style="max-width: 10rem">
                                 <div class="card-body">
-                                <b id="day4Date">DATE</b>
-                                <p>pic</p>
-                                <p id="day4temp">Temp:</p>
-                                <p id="day4Hum">Humidity:</p>
+                                    <b id="day4Date"></b>
+                                    <p><img id="day4Icon"></img></p>
+                                    <p id="day4Temp"></p>
+                                    <p id="day4Hum"></p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-2">
-                            <div class="card">
+                        <div class="col">
+                            <div class="card text-white bg-info mb-3" style="max-width: 10rem">
                                 <div class="card-body">
-                                <b id="day5Date">DATE</b>
-                                <p>pic</p>
-                                <p id="day5temp">Temp:</p>
-                                <p id="day5Hum">Humidity:</p>
+                                    <b id="day5Date"></b>
+                                    <p><img id="day5Icon"></img></p>
+                                    <p id="day5Temp"></p>
+                                    <p id="day5Hum"></p>
                                 </div>
                             </div>
                         </div>
@@ -118,12 +115,6 @@
         </div>
 
 
-
-
-
-
-
-        <!-- <i class="fas fa-search"></i> -->
 
 
 
